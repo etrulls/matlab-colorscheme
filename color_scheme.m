@@ -20,112 +20,113 @@ bool.show_right_hand_line = 0;
 
 switch(scheme)
 	%% defaults
-  case 'defaults'
-    % editor colors
-    bool.use_system_colors = 1;
-    colors.background = [255 255 255];
-    colors.text = [0 0 0];
-    colors.keywords = [0 0 255];
-    colors.comments = [34 139 34];
-    colors.strings = [160 32 240];
-    colors.unterminated_strings = [178 34 34];
-    colors.system_commands = [205 133 63];
-    colors.syntax_errors = [255 0 0];
-		
+	case 'defaults'
+		% editor colors
+		bool.use_system_colors = 1;
+		colors.background = [255 255 255];
+		colors.text = [0 0 0];
+		colors.keywords = [0 0 255];
+		colors.comments = [34 139 34];
+		colors.strings = [160 32 240];
+		colors.unterminated_strings = [178 34 34];
+		colors.system_commands = [205 133 63];
+		colors.syntax_errors = [255 0 0];
+
 		% command window colors
-    colors.cmd_errors = [255 0 0];
-    colors.cmd_warnings = [255 140 0];
-    colors.cmd_hyperlinks = [0 0 255];
+		colors.cmd_errors = [255 0 0];
+		colors.cmd_warnings = [255 140 0];
+		colors.cmd_hyperlinks = [0 0 255];
 
-    % code analyzer colors
-    colors.code_analyzer_warnings = [255 165 0];
-    bool.autofix_highlight = 0;
-    colors.autofix_highlight = [238 232 170];
-    bool.automatically_highlight = 0;
-    colors.automatically_highlight = [240 255 255];
-    bool.variables_shared_scope = 1;
-    colors.variables_shared_scope = [0 206 209];
-    bool.highlight_cells = 1;
-    colors.highlight_cells = [255 255 224];
-    bool.show_lines_between_sections = 1;
+		% code analyzer colors
+		colors.code_analyzer_warnings = [255 165 0];
+		bool.autofix_highlight = 0;
+		colors.autofix_highlight = [238 232 170];
+		bool.automatically_highlight = 0;
+		colors.automatically_highlight = [240 255 255];
+		bool.variables_shared_scope = 1;
+		colors.variables_shared_scope = [0 206 209];
+		bool.highlight_cells = 1;
+		colors.highlight_cells = [255 255 224];
+		bool.show_lines_between_sections = 1;
 
-    % current line color
-    bool.current_line = 1;
-    colors.current_line = [238 232 170];
-	
+		% current line color
+		bool.current_line = 1;
+		colors.current_line = [238 232 170];
+
 	%% solarized light
 	%case 'solarized-light'
-	
+
 	%% solarized dark
 	case 'solarized-dark'
-    % editor colors
-    bool.use_system_colors = 0;
-    colors.background = [0 43 54];
-    colors.text = [151 168 170];
-    colors.keywords = [38 139 219];
-    colors.comments = [88 110 117];
-    colors.strings = [42 161 152];%249 38 114
-    colors.unterminated_strings = [211 54 130];
-    colors.system_commands = [181 137 0];
-    colors.syntax_errors = [220 50 47];
-		
+		% editor colors
+		bool.use_system_colors = 0;
+		colors.background = [0 43 54];
+		colors.text = [151 168 170];
+		colors.keywords = [38 139 219];
+		colors.comments = [88 110 117];
+		colors.strings = [42 161 152];%249 38 114
+		colors.unterminated_strings = [211 54 130];
+		colors.system_commands = [181 137 0];
+		colors.syntax_errors = [220 50 47];
+
 		% command window colors
-    colors.cmd_errors = [220 50 47];
-    colors.cmd_warnings = [203 75 22];
-    colors.cmd_hyperlinks = [38 139 210];
+		colors.cmd_errors = [220 50 47];
+		colors.cmd_warnings = [203 75 22];
+		colors.cmd_hyperlinks = [38 139 210];
 
-    % code analyzer colors
-    colors.code_analyzer_warnings = [203 75 22];
-    bool.autofix_highlight = 0;
-    %colors.autofix_highlight = [0 0 255];
-    bool.automatically_highlight = 1;
-    colors.automatically_highlight = [88 110 117];
-    bool.variables_shared_scope = 1;
-    colors.variables_shared_scope = [133 153 0];
-    bool.highlight_cells = 1;
-    colors.highlight_cells = [10 53 64];
-    bool.show_lines_between_sections = 1;
+		% code analyzer colors
+		colors.code_analyzer_warnings = [203 75 22];
+		bool.autofix_highlight = 0;
+		%colors.autofix_highlight = [0 0 255];
+		bool.automatically_highlight = 1;
+		colors.automatically_highlight = [88 110 117];
+		bool.variables_shared_scope = 1;
+		colors.variables_shared_scope = [133 153 0];
+		bool.highlight_cells = 1;
+		colors.highlight_cells = [10 53 64];
+		bool.show_lines_between_sections = 1;
 
-    % current line color
-    bool.current_line = 1;
-    colors.current_line = [20 63 74];
-	
+		% current line color
+		bool.current_line = 1;
+		colors.current_line = [20 63 74];
+
 	%% monokai
 	case 'monokai-dark'
 		% editor colors
-    bool.use_system_colors = 0;
-    colors.background = [13 13 13];
-    colors.text = [248 248 242];
-    colors.keywords = [102 217 239];
-    colors.comments = [98 99 90];
-    colors.strings = [230 219 116];
-    colors.unterminated_strings = [253 151 31];
-    colors.system_commands = [166 226 46];
-    colors.syntax_errors = [249 38 114];
-		
+		bool.use_system_colors = 0;
+		colors.background = [13 13 13];
+		colors.text = [248 248 242];
+		colors.keywords = [102 217 239];
+		colors.comments = [98 99 90];
+		colors.strings = [230 219 116];
+		colors.unterminated_strings = [253 151 31];
+		colors.system_commands = [166 226 46];
+		colors.syntax_errors = [249 38 114];
+
 		% command window colors
-    colors.cmd_errors = [249 38 114];
-    colors.cmd_warnings = [253 151 31];
-    colors.cmd_hyperlinks = [102 217 239];
+		colors.cmd_errors = [249 38 114];
+		colors.cmd_warnings = [253 151 31];
+		colors.cmd_hyperlinks = [102 217 239];
 
-    % code analyzer colors
-    colors.code_analyzer_warnings = [253 151 31];
-    bool.autofix_highlight = 0;
-    %colors.autofix_highlight = [238 232 170];
-    bool.automatically_highlight = 1;
-    colors.automatically_highlight = [154 109 225];
-    bool.variables_shared_scope = 1;
-    colors.variables_shared_scope = [174 129 255];
-    bool.highlight_cells = 1;
-    colors.highlight_cells = [26 26 26];
-    bool.show_lines_between_sections = 1;
+		% code analyzer colors
+		colors.code_analyzer_warnings = [253 151 31];
+		bool.autofix_highlight = 0;
+		%colors.autofix_highlight = [238 232 170];
+		bool.automatically_highlight = 1;
+		colors.automatically_highlight = [154 109 225];
+		bool.variables_shared_scope = 1;
+		colors.variables_shared_scope = [174 129 255];
+		bool.highlight_cells = 1;
+		colors.highlight_cells = [26 26 26];
+		bool.show_lines_between_sections = 1;
 
-    % current line color
-    bool.current_line = 1;
-    colors.current_line = [50 50 50];
+		% current line color
+		bool.current_line = 1;
+		colors.current_line = [50 50 50];
+
 	%% nothing
-  otherwise
-    error('Unknown type');
+	otherwise
+		error('Unknown type');
 end
 
 %% apply values
@@ -209,9 +210,9 @@ function cc = j(c)
 %% shorthand to format [R, G, B] into a java color thing
 
 if numel(c)~=3
-  error('Not an array of 3');
+	error('Not an array of 3');
 elseif min(c)<0 || max(c)>255
-  error('Colors should be [0,255]');
+	error('Colors should be [0,255]');
 end
 
 cc = java.awt.Color(c(1)/255, c(2)/255, c(3)/255);
