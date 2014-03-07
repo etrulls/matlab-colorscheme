@@ -117,12 +117,12 @@ switch(scheme)
 		bool.variables_shared_scope = 1;
 		colors.variables_shared_scope = [174 129 255];
 		bool.highlight_cells = 1;
-		colors.highlight_cells = [26 26 26];
+		colors.highlight_cells = [23 23 23];
 		bool.show_lines_between_sections = 1;
 
 		% current line color
 		bool.current_line = 1;
-		colors.current_line = [50 50 50];
+		colors.current_line = [36 36 36];
 
 	%% nothing
 	otherwise
