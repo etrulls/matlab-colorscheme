@@ -1,17 +1,25 @@
 function color_scheme(scheme)
 % function color_scheme(scheme)
-%		Scheme: 'defaults', 'solarized-dark', 'monokai-dark'
-%		They are not really those schemes but my approximations
-%		The 'defaults' scheme doesn't restore anything, just sets values close
-%		to the default ones! Because doing it right seems very annoying!
+%   Scheme: 'defaults', 'solarized-dark', 'monokai-dark'
+%   They are not really those schemes but my approximations
+%   IMPORTANT: The 'defaults' scheme doesn't actually restore anything,
+%   it just sets values close to the default ones! I don't know how to
+%   do it properly and I don't care enough. You might!
 %
-%		Ripped off from various sources, tweaked to my liking. Thoroughly
-%		undebugged. IT CAN KILL YOU!
+%   Ripped off from various sources, tweaked to my liking. Thoroughly
+%   untested. Use it at your own risk.
 %
-%		Tested only with R2013a and whatever options I use.
-%		If something breaks: restore the defaults on the preference pane.
-%		If everything breaks: delete your preferences file (you'll lose stuff).
-%		Questions: etru 1 9   2 7 at gmail dot com
+%   Tried it only with R2013a (os x/linux) and whatever options I use.
+%   If something breaks: restore the defaults on the preference pane.
+%   If everything breaks: you can delete your preferences file (you'll
+%   lose stuff!).
+%   Questions: et   ru 1 9   2 7 at gmail dot com
+
+c = input('This action CANNOT BE UNDONE (easily).\nPlease read the help entry (> help color_scheme).\n*Do you wish to proceed?* y/n\n', 's');
+if ~isequal(c, 'y')
+	fprintf('Ok, no action done\n');
+	return;
+end
 
 % COMMON
 % line numbers 
@@ -94,7 +102,8 @@ switch(scheme)
 	case 'monokai-dark'
 		% editor colors
 		bool.use_system_colors = 0;
-		colors.background = [13 13 13];
+		%colors.background = [13 13 13];
+		colors.background = [31	 32 26];
 		colors.text = [248 248 242];
 		colors.keywords = [102 217 239];
 		colors.comments = [98 99 90];
@@ -113,16 +122,18 @@ switch(scheme)
 		bool.autofix_highlight = 0;
 		%colors.autofix_highlight = [238 232 170];
 		bool.automatically_highlight = 1;
-		colors.automatically_highlight = [154 109 225];
+		colors.automatically_highlight = [154 109 225];%[166 226 46];
 		bool.variables_shared_scope = 1;
 		colors.variables_shared_scope = [174 129 255];
 		bool.highlight_cells = 1;
-		colors.highlight_cells = [23 23 23];
+		%colors.highlight_cells = [18 18 18];
+		colors.highlight_cells = [39 40 34];
 		bool.show_lines_between_sections = 1;
 
 		% current line color
 		bool.current_line = 1;
-		colors.current_line = [36 36 36];
+		%colors.current_line = [26 26 26];
+		colors.current_line = [50 51 45];
 
 	%% nothing
 	otherwise
@@ -204,6 +215,7 @@ if bool.current_line
 end
 com.mathworks.services.ColorPrefs.notifyColorListeners('Editorhighlight-caret-row-boolean-color');
 
+fprintf('Done\n');
 
 
 function cc = j(c)
