@@ -27,7 +27,7 @@ bool.show_line_numbers = 1;
 bool.show_right_hand_line = 0;
 
 switch(scheme)
-	%% defaults
+	% defaults
 	case 'defaults'
 		% editor colors
 		bool.use_system_colors = 1;
@@ -61,10 +61,10 @@ switch(scheme)
 		bool.current_line = 1;
 		colors.current_line = [238 232 170];
 
-	%% solarized light
+	% solarized light
 	%case 'solarized-light'
 
-	%% solarized dark
+	% solarized dark
 	case 'solarized-dark'
 		% editor colors
 		bool.use_system_colors = 0;
@@ -98,7 +98,7 @@ switch(scheme)
 		bool.current_line = 1;
 		colors.current_line = [20 63 74];
 
-	%% monokai
+	% monokai
 	case 'monokai-dark'
 		% editor colors
 		bool.use_system_colors = 0;
@@ -106,7 +106,7 @@ switch(scheme)
 		colors.background = [31	 32 26];
 		colors.text = [248 248 242];
 		colors.keywords = [102 217 239];
-		colors.comments = [98 99 90];
+		colors.comments = [118 119 110];
 		colors.strings = [230 219 116];
 		colors.unterminated_strings = [253 151 31];
 		colors.system_commands = [166 226 46];
@@ -135,12 +135,11 @@ switch(scheme)
 		%colors.current_line = [26 26 26];
 		colors.current_line = [50 51 45];
 
-	%% nothing
 	otherwise
 		error('Unknown type');
 end
 
-%% apply values
+% APPLY VALUES
 % show line numbers
 com.mathworks.services.Prefs.setBooleanPref('EditorShowLineNumbers', bool.show_line_numbers);
 % show right-hand line
@@ -219,7 +218,7 @@ fprintf('Done\n');
 
 
 function cc = j(c)
-%% shorthand to format [R, G, B] into a java color thing
+% shorthand to format [R, G, B] into a java color thing
 
 if numel(c)~=3
 	error('Not an array of 3');
