@@ -1,6 +1,6 @@
 function colorscheme(scheme, varargin)
 % function colorsscheme(scheme)
-%		Scheme: 'matlab', 'solarized-dark', 'monokai-dark'
+%		Scheme: 'matlab', 'solarized-dark', 'monokai-dark', 'badwolf'
 %   Options: 'show-line-numbers', 'hide-line-numbers', 'show-right-hand-line',
 %   'hide-right-hand-line', 'show-autofix-highlights',
 %   'hide-autofix-highlights', 'show-cell-lines', 'hide-cell-lines'
