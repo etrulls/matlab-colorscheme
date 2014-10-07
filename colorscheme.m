@@ -137,7 +137,7 @@ switch(scheme)
 		%% badwolf
 		% background and highlights
 		colors.background = '141413';
-		colors.highlight_cells = '1c1b1a';
+		colors.highlight_cells = '242321';%'1c1b1a';
 		colors.highlight_current_line = '35322d';
 		colors.highlight_autofix_suggestions = 'b88853';
 		colors.highlight_current_variable = '666462';
