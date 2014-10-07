@@ -13,7 +13,7 @@ function colorscheme(scheme, varargin)
 %   You may restore the defaults deleting your .matlab/[RXXX]/matlab.prf file,
 %   but you will lose some settings (fonts, etc.)
 %
-%  (This aplp
+%  (Only .m syntax highlighting is considered.)
 
 % show line numbers
 for i=1:numel(varargin)

@@ -1,13 +1,15 @@
-% function color_scheme(scheme)
-%   Scheme: 'defaults', 'solarized-dark', 'monokai-dark'
-%   They are not really those schemes but my approximations
-%   The 'defaults' scheme doesn't restore anything, just sets values close
-%   to the default ones! Because doing it right seems very annoying!
+% function colorsscheme(scheme)
+%   Scheme: 'matlab', 'solarized-dark', 'monokai-dark'
+%   Options: 'show-line-numbers', 'hide-line-numbers', 'show-right-hand-line',
+%   'hide-right-hand-line', 'show-autofix-highlights',
+%   'hide-autofix-highlights', 'show-cell-lines', 'hide-cell-lines'
 %
-%   Ripped off from various sources, tweaked to my liking. Thoroughly
-%   undebugged. IT CAN KILL YOU!
+%   Neither are the actual schemes, but adaptations.
+%   The 'matlab' scheme does not restore anything. It just sets values close to
+%   the defaults.
 %
-%   Tested only with R2013a and whatever options I use.
-%   If something breaks: restore the defaults on the preference pane.
-%   If everything breaks: delete your preferences file (you'll lose stuff).
-%   Questions: etru 1 9   2 7 at gmail dot com
+%   Thoroughly undebugged: do not take this lightly.
+%   You may restore the defaults deleting your .matlab/[RXXX]/matlab.prf file,
+%   but you will lose some settings (fonts, etc.)
+%
+%  (Only .m syntax highlighting is considered.)
