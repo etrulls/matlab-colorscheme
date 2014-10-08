@@ -1,15 +1,19 @@
-% function colorsscheme(scheme)
-%   Scheme: 'matlab', 'solarized-dark', 'monokai-dark', 'badwolf'
+% COLORSCHEME Change Matlab's color scheme.
+%   colorscheme(SCHEME,[OPTIONS])
+%
+%   Schemes: 'matlab', 'solarized-dark', 'monokai', 'monokai-dark', 'badwolf'
+%
 %   Options: 'show-line-numbers', 'hide-line-numbers', 'show-right-hand-line',
 %   'hide-right-hand-line', 'show-autofix-highlights',
 %   'hide-autofix-highlights', 'show-cell-lines', 'hide-cell-lines'
 %
-%   Neither are the actual schemes, but adaptations.
+%   Neither are the actual schemes, but (close) adaptations.
 %   The 'matlab' scheme does not restore anything. It just sets values close to
 %   the defaults.
 %
-%   Thoroughly undebugged: do not take this lightly.
+%   This script is thoroughly undebugged: do not take this lightly.
 %   You may restore the defaults deleting your .matlab/[RXXX]/matlab.prf file,
 %   but you will lose some settings (fonts, etc.)
 %
-%  (Only .m syntax highlighting is considered.)
+%   Only .m syntax highlighting is altered. Feel free to add support for
+%   other filetypes.

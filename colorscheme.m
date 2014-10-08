@@ -1,19 +1,23 @@
 function colorscheme(scheme, varargin)
-% function colorsscheme(scheme)
-%		Scheme: 'matlab', 'solarized-dark', 'monokai-dark', 'badwolf'
+% COLORSCHEME Change Matlab's color scheme.
+%   colorscheme(SCHEME,[OPTIONS])
+%
+%   Schemes: 'matlab', 'solarized-dark', 'monokai', 'monokai-dark', 'badwolf'
+%
 %   Options: 'show-line-numbers', 'hide-line-numbers', 'show-right-hand-line',
 %   'hide-right-hand-line', 'show-autofix-highlights',
 %   'hide-autofix-highlights', 'show-cell-lines', 'hide-cell-lines'
 %
-%		Neither are the actual schemes, but adaptations.
-%		The 'matlab' scheme does not restore anything. It just sets values close to
+%   Neither are the actual schemes, but (close) adaptations.
+%   The 'matlab' scheme does not restore anything. It just sets values close to
 %   the defaults.
 %
-%		Thoroughly undebugged: do not take this lightly.
+%   This script is thoroughly undebugged: do not take this lightly.
 %   You may restore the defaults deleting your .matlab/[RXXX]/matlab.prf file,
 %   but you will lose some settings (fonts, etc.)
 %
-%  (Only .m syntax highlighting is considered.)
+%   Only .m syntax highlighting is altered. Feel free to add support for
+%   other filetypes.
 
 % show line numbers
 for i=1:numel(varargin)
@@ -103,13 +107,20 @@ switch(scheme)
 		% limiter line color
 		colors.editor_limiter_line = [60 60 60];
 
-	case 'monokai-dark'
+	case {'monokai','monokai-dark'} % 
 		%% monokai
 		% background and highlights
-		colors.background = [13 13 13];
-		colors.highlight_cells = [23 23 23];
-		colors.highlight_current_line = [26 26 26];
-		colors.highlight_autofix_suggestions = [88 110 117];
+		if strcmp(scheme,'monokai')
+			colors.background = [36 37 31];
+			colors.highlight_cells = [41 42 36];
+			colors.highlight_current_line = [49 50 44];
+		else
+			colors.background = [13 13 13];
+			colors.highlight_cells = [23 23 23];
+			colors.highlight_current_line = [29 29 29];
+		end
+		
+		colors.highlight_autofix_suggestions = [88 110 117];%[102 217 239]
 		colors.highlight_current_variable = [74 39 145];
 		
 		% underline
@@ -118,12 +129,16 @@ switch(scheme)
 		
 		% text
 		colors.text = [248 248 242];
-		colors.keywords = [102 217 239];
-		colors.comments = [98 99 90];
+		colors.keywords = [249 38 114];%[102 217 239];
+		if strcmp(scheme,'monokai')
+			colors.comments = [117 113 94];
+		else
+			colors.comments = [98 99 90];
+		end
 		colors.strings = [230 219 116];
 		colors.unterminated_strings = [253 151 31];
 		colors.system_commands = [166 226 46];
-		colors.persistent_variables = [133 153 0];
+		colors.persistent_variables = [166 226 46];
 
 		% command window
 		colors.cmd_errors = [249 38 114];
@@ -137,8 +152,8 @@ switch(scheme)
 		%% badwolf
 		% background and highlights
 		colors.background = '141413';
-		colors.highlight_cells = '242321';%'1c1b1a';
-		colors.highlight_current_line = '35322d';
+		colors.highlight_cells = '1c1b1a'; % dark: '1c1b1a' light: '242321' mean: '201f1d'
+		colors.highlight_current_line = '242321';%'35322d';
 		colors.highlight_autofix_suggestions = 'b88853';
 		colors.highlight_current_variable = '666462';
 		
@@ -151,13 +166,13 @@ switch(scheme)
 		colors.keywords = 'ff2c4b';
 		colors.comments = '857f78';
 		colors.strings = 'f4cf86';
-		colors.unterminated_strings = 'ff9eb8';
+		colors.unterminated_strings = 'ff9eb8';%'ffa724';
 		colors.system_commands = '8cffba';
 		colors.persistent_variables = 'aeee00';
 
 		% command window
 		colors.cmd_errors = 'ff2c4b';
-		colors.cmd_warnings = 'ff9eb8';
+		colors.cmd_warnings = 'ff9eb8';%'ffa724';
 		colors.cmd_hyperlinks = '0a9dff';
 		
 		% limiter line color
