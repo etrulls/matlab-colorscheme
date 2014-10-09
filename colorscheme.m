@@ -10,11 +10,8 @@ function colorscheme(scheme, varargin)
 %
 %   Neither are the actual schemes, but (close) adaptations.
 %   The 'matlab' scheme does not restore anything. It just sets values close to
-%   the defaults.
-%
-%   This script is thoroughly undebugged: do not take this lightly.
-%   You may restore the defaults deleting your .matlab/[RXXX]/matlab.prf file,
-%   but you will lose some settings (fonts, etc.)
+%   the defaults, as I do not know the actual values. If you truly want to
+%   restore your settings you will have to do so through the preferences pane.
 %
 %   Only .m syntax highlighting is altered. Feel free to add support for
 %   other filetypes.
