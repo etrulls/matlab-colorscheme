@@ -2,7 +2,7 @@ function colorscheme(scheme, varargin)
 % COLORSCHEME Change Matlab's color scheme.
 %   colorscheme(SCHEME,[OPTIONS])
 %
-%   Schemes: 'matlab', 'solarized-dark', 'monokai', 'monokai-dark', 'badwolf'
+%   Schemes: 'matlab', 'ir-black', 'solarized-dark', 'monokai', 'monokai-dark', 'badwolf'
 %
 %   Options: 'show-line-numbers', 'hide-line-numbers', 'show-right-hand-line',
 %   'hide-right-hand-line', 'show-autofix-highlights',
@@ -73,7 +73,36 @@ switch(scheme)
 
 		% limiter line color
 		colors.editor_limiter_line = [200 200 200];
+    case 'ir-black'
+        %% IR Black
+		% background and highlights
+		colors.background = [39 40 33];
+		colors.highlight_cells = [45 46 40];
+		colors.highlight_current_line = [49 50 44];
+		colors.highlight_autofix_suggestions = [122 67 0];
+		colors.highlight_current_variable = [68 76 146];
+		
+		% underline
+		colors.underline_syntax_errors = [255 108 96];
+		colors.underline_code_warnings = [255 165 0];
+		
+		% text
+		colors.text = [163 164 156];
+		colors.keywords = [150 203 254];
+		colors.comments = [65 168 96];
+		colors.strings = [198 197 254];
+		colors.unterminated_strings = [255 115 253];
+		colors.system_commands = [255 253 183];
+		colors.persistent_variables = [0 176 178];
 
+		% command window colors
+		colors.cmd_errors = [255 108 96];
+		colors.cmd_warnings = [255 181 115];
+		colors.cmd_hyperlinks = [150 203 254];
+		
+		% limiter line color
+		colors.editor_limiter_line = [60 60 60];
+        
 	case 'solarized-dark'
 		%% solarized dark
 		% background and highlights
