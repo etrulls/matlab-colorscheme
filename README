@@ -1,7 +1,7 @@
 % COLORSCHEME Change Matlab's color scheme.
 %   colorscheme(SCHEME,[OPTIONS])
 %
-%   Schemes: 'matlab', 'solarized-dark', 'monokai', 'monokai-dark', 'badwolf'
+%   Schemes: 'matlab', 'ir-black', 'solarized-dark', 'monokai', 'monokai-dark', 'badwolf'
 %
 %   Options: 'show-line-numbers', 'hide-line-numbers', 'show-right-hand-line',
 %   'hide-right-hand-line', 'show-autofix-highlights',
